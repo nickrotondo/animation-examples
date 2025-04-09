@@ -36,6 +36,8 @@ export function AnimatedGridLayout({ cards, removeCard }: GridLayoutProps) {
               duration: 0.5,
               bounce: 0.35,
             }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.95 }}
             className={`${card.color} p-6 rounded-lg text-white h-40 flex items-center justify-center relative`}
           >
             <button
