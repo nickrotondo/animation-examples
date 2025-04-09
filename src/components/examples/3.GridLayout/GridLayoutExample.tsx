@@ -25,12 +25,14 @@ const staticCode = `// Static implementation without animations
 const animatedCode = `import { AnimatePresence, motion } from "motion/react";
 
 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 overflow-visible">
-  {/* AnimatePresence handles the exit animations when cards are removed */}
+  {/* AnimatePresence for things that enter and exit the DOM. */}
+  {/* Mode changes how the layout shifts when new elements enter and exit */}
   <AnimatePresence mode="popLayout">
     {cards.map((card) => (
       <motion.div
         layout // Smoothly animates the layout changes
         key={card.id}
+        // Animate the cards in and out of the DOM:
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.5 }}
@@ -39,6 +41,8 @@ const animatedCode = `import { AnimatePresence, motion } from "motion/react";
           duration: 0.5,
           bounce: 0.35
         }}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.95 }}
         className={\`\${card.color} p-6 rounded-lg text-white h-40 flex items-center justify-center relative\`}
       >
         <button
