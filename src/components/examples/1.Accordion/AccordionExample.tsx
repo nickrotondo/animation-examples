@@ -57,9 +57,9 @@ export function AccordionExample() {
         "It's not personal; tornadoes just have a knack for picking favorites. Maybe you should consider a tornado-proof lawn gnome as a peace offering!",
     },
     {
-      question: "Should I just move back to California?",
+      question: "Should I just move to California?",
       answer:
-        "Yeah, probably. The commie's are trying their best to make it unappealing, but you can't beat the beach, mountains and weather.",
+        "Depends on personal preference. If you're more of a fires and earthquakes guy, Cali is the GOAT, but if you like your disasters to come with a warning, stick around!",
     },
   ];
 
